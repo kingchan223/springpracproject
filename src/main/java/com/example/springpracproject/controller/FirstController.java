@@ -12,4 +12,11 @@ public class FirstController {
         model.addAttribute("username", "ChanLee");//view에 전달할 데이터를 key:valuer쌍으 전달가능
         return "greeting";// 머스테치 파일이름만 적어준다. => 스프링이 templates/greeting.mustache로 알아서 찾아준다.
     }
+
+    @GetMapping("/bye")
+    public String SeeYouNext(Model model){
+        model.addAttribute("nickname", "ChanLee");//view에 전달할 데이터를 key:valuer쌍으 전달가능
+        return "goodbye";// 머스테치 파일이름만 적어준다. => 스프링이 templates/greeting.mustache로 알아서 찾아준다.
+    }
+
 }
